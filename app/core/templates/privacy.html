@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Chatbot</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='styles/style-start.css') }}"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  </head>
+
+  <body>
+    <!-- partial:index.partial.html -->
+    <section class="start">
+      <header class="start-header">
+        <div class="start-header-title">
+          Willkommen in der Übung "Datenstrukturen" im Sommersemester 2023
+        </div>
+      </header>
+      <main class="main">
+        <div class="task-title"><b>Datenschutzbelehrung</b></div>
+
+        <div class="task-description">
+          Bitte bestätigen Sie, dass Sie die Datenschutzhinweise gelesen haben
+          und mit der Erhebung Ihrer Daten einverstanden sind.
+          <br />
+          <form
+            class="consent"
+            action="privacy_consent"
+            enctype="multipart/form-data"
+            method="post"
+          >
+            <div>
+              <div class="consent-box">
+                <input type="checkbox" id="privacy" name="privacy" required />
+                <label for="privacy"
+                  >Ich habe die
+                  <a href="https://www.tu-chemnitz.de/informatik/ST/research/Experiments/chatgpt/DatenstrukturenSoSe23Datenschutz.pdf"  target="_blank" rel="noopener noreferrer">Datenschutzbelehrung</a>
+                  gelesen und willige ein.
+                </label>
+              </div>
+            </div>
+            <button class="consent-button">Einverständnis erteilen</button>
+          </form>
+        </div>
+      </main>
+    </section>
+  </body>
+</html>

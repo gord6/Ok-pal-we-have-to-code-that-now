@@ -1,0 +1,167 @@
+:root {
+  --body-bg: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  --msger-bg: #fff;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background-image: var(--body-bg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  font-family: Helvetica, sans-serif;
+}
+
+.start {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-between;
+  width: 100%;
+  min-height: 400px;
+  max-width: 960px;
+  margin: 25px 10px;
+  border: var(--border);
+  border-radius: 5px;
+  background: white;
+  box-shadow: 0 15px 15px -5px rgba(0, 0, 0, 0.2);
+}
+
+.start-header {
+  /* display: flex; */
+  font-size: medium;
+  justify-content: space-between;
+  padding: 10px;
+  text-align: center;
+  border-bottom: var(--border);
+  background: #eee;
+  color: #666;
+}
+
+.instruction {
+  padding-top: 20px;
+}
+
+.start-form {
+  display: flex;
+  padding: 10px;
+  flex-direction: column;
+  justify-content: center;
+  line-height: 3;
+}
+.start-div {
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.main {
+  display: flex;
+  align-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  color: #666;
+  align-items: center;
+}
+
+.task-description {
+  background: #eee;
+  display: flex;
+  border-radius: 3px;
+  width: 80%;
+  height: 40%;
+  padding: 10px;
+  margin-bottom: 70px;
+  flex-direction: column;
+  align-items: center;
+}
+
+.task-title {
+  margin-bottom: 50px;
+  margin-top: 50px;
+
+  font-size: larger;
+  font-weight: bold;
+}
+
+.likert-div {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 15px;
+  padding-right: 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.likert {
+  float: left;
+  padding: 7px;
+  list-style-type: none;
+  list-style-position: inside;
+  color: #666;
+}
+
+.likert-item {
+  margin: 15px;
+}
+
+.start-button {
+  background-color: #04aa6d;
+  color: white;
+  cursor: pointer;
+  transition: background 0.23s;
+  text-decoration: none;
+  float: right;
+  border: none;
+  text-align: center;
+  border-radius: 3px;
+  padding: 10px;
+  width: 20%;
+}
+
+.consent-button {
+  background-color: #04aa6d;
+  color: white;
+  cursor: pointer;
+  transition: background 0.23s;
+  text-decoration: none;
+  border: none;
+  text-align: center;
+  border-radius: 3px;
+  padding: 10px;
+  width: 50%;
+}
+
+/* Add a hover effect for buttons */
+.start-button:hover {
+  opacity: 0.8;
+}
+
+.consent {
+  background-color: #eee;
+  display: flex;
+  padding: 20px;
+  margin: 10px;
+  flex-direction: column;
+  align-items: center;
+}
+
+.consent-box {
+  background-color: #eee;
+  padding: 20px;
+  margin: 10px;
+}

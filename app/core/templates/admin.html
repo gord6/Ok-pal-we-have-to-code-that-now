@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Chatbot</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles/style-general.css') }}" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</head>
+
+<body>
+  <!-- partial:index.partial.html -->
+  <section class="window">
+    <header class="window-header">
+      <div class="window-header-title">Adminportal</div>
+    </header>
+    <main class="main">
+      <h2>Tasks aktualisieren</h2>
+      <form class="tasks-form">
+        <div class="tasks" id="tasks">
+          <div class="task-header">
+            <div class="task-name">Name</div>
+            <div class="task-enabled">Aktiviert</div>
+            <div class="task-order">Reihung</div>
+            <div class="task-chatgpt">ChatGPT</div>
+            <div class="task-description">Beschreibung</div>
+          </div>
+        </div>
+        <button class="btn" id="task-update">Tasks updaten</button>
+      </form>
+
+      <h2>Task hinzufügen</h2>
+      <form class="tasks-form">
+        <div class="tasks-update" id="tasks-update">
+          <div class="task-header">
+            <div class="task-name" id="name">Name</div>
+            <div class="task-enabled">Aktiviert</div>
+            <div class="task-order">Reihung</div>
+            <div class="task-chatgpt">ChatGPT</div>
+            <div class="task-description">Beschreibung</div>
+          </div>
+          <div class="task" id="new-task">
+            <input class="task-name" type="text" id="new-task-name"></input>
+            <select class="task-enabled" type="submit">
+              <option value="enabled" selected> Aktiviert </option>
+              <option value="disabled">Deaktiviert</option>
+            </select>
+            <input class="task-order" type="number" value=10></input>
+            <select class="task-chatgpt" type="submit">
+              <option value="enabled" selected> Aktiviert </option>
+              <option value="disabled">Deaktiviert</option>
+            </select>
+            <input class="task-description" type="text" value="Beschreibung"></input>
+          </div>
+        </div>
+        <button class="btn" id="task-add">Neue Task hinzufügen</button>
+      </form>
+
+
+      <h2>Gruppen aktivieren/deaktivieren</h2>
+      <form class="group-form">
+        <div class="groups" id="groups">
+          <div class="group-header">
+            <div class="group-name">Name</div>
+            <div class="group-activated">Aktiviert</div>
+          </div>
+        </div>
+        <button class="btn" id="group-update">Gruppen updaten</button>
+      </form>
+
+
+
+      <h2>User hinzfügen</h2>
+      <form class="user-form">
+        <div class="user-add" id="user-update">
+          <div class="user-header">
+            <div class="user-name" id="name">Name</div>
+            <div class="user-group">Gruppe</div>
+            <div class="user-pw">Passwort</div>
+          </div>
+          <div class="user" id="new-user">
+            <input class="user-name" type="text" id="user-name"></input>
+            <select class="user-group" id="user-group"></select>
+            <input class="user-pw" type="text" id="user-pw"></input>
+          </div>
+        </div>
+        <button class="btn" id="user-add">Neuen User anlegen</button>
+      </form>
+
+
+
+      <h2>Gruppenzuweisung ändern</h2>
+      <form class="user-form">
+        <div class="user-add" id="user-update">
+          <div class="user-header">
+            <div class="user-name">Name</div>
+            <div class="user-group">Gruppe</div>
+          </div>
+          <div class="user" id="update-user">
+            <select class="user-name" id="user-ids-select"></select>
+            <select class="user-group" id="user-group-select"></select>
+          </div>
+        </div>
+        <button class="btn" id="user-act">User aktualisieren</button>
+      </form>
+
+      <h2>Herunterladen von Daten</h2>
+      <div class="download-section">
+        <p>Tabelle mit Prompts, ChatGPT Antworten und Feedback</p>
+        <a class="btn" href="{{ url_for('download_data', table='prompts')}}">Download</a>
+      </div>
+      <div class="download-section">
+        <p>Tabelle mit Fragebogenitems</p>
+        <a class="btn" href="{{ url_for('download_data', table='questionnaire')}}">Download</a>
+      </div>
+      <div class="download-section">
+        <p>Tabelle mit Lösungen und History</p>
+        <a class="btn" href="{{ url_for('download_data', table='submissions')}}">Download</a>
+      </div>
+      <div class="download-section">
+        <p>Aktionen und Zeitstempel</p>
+        <a class="btn" href="{{ url_for('download_data', table='actions')}}">Download</a>
+      </div>
+      <div class="download-section">
+        <p>Userdaten</p>
+        <a class="btn" href="{{ url_for('download_data', table='users')}}">Download</a>
+      </div>
+      <div class="download-section">
+        <p>Aufgaben</p>
+        <a class="btn" href="{{ url_for('download_data', table='tasks')}}">Download</a>
+      </div>
+      <div class="download-section">
+        <p>Gruppen</p>
+        <a class="btn" href="{{ url_for('download_data', table='exc_groups')}}">Download</a>
+      </div>
+    </main>
+  </section>
+  <script>
+
+
+    groupElement = document.getElementById("groups");
+    taskUpdateButton = document.getElementById("task-update");
+    groupUpdateButton = document.getElementById("group-update");
+
+    taskAddButton = document.getElementById("task-add");
+    userAddButton = document.getElementById("user-add");
+
+    userSelection = document.getElementById("user-ids-select");
+    userUpdateButton = document.getElementById("user-act");
+
+
+    userUpdateButton.addEventListener("click", (event) => {
+      event.preventDefault();
+
+      user = document.getElementById("user-ids-select").value;
+      group = document.getElementById("user-group-select").value;
+
+
+      updateUser(user, group);
+    });
+
+
+    userSelection.addEventListener("click", (event) => {
+      display_selected_group();
+    })
+
+    taskUpdateButton.addEventListener("click", (event) => {
+      event.preventDefault();
+
+      tasks = tasksElement.getElementsByClassName("task");
+
+      updateTasks([...tasks].map(extractTask));
+    });
+
+    groupUpdateButton.addEventListener("click", (event) => {
+      event.preventDefault();
+
+      groups = groupsElement.getElementsByClassName("group");
+
+      updateGroups([...groups].map(extractGroup));
+    });
+
+
+    taskAddButton.addEventListener("click", (event) => {
+      event.preventDefault();
+
+      task = document.getElementById("new-task");
+      data = extractTask(task);
+      data["type"] = "Add"
+      data["name"] = task.getElementsByClassName("task-name")[0].value
+
+      addTask(data);
+
+    });
+
+
+    userAddButton.addEventListener("click", (event) => {
+      event.preventDefault();
+
+      let user = document.getElementById("new-user");
+      user = extractUser(user);
+      addUser(user);
+    });
+
+
+    function extractUser(user) {
+      return {
+        "name": user.getElementsByClassName("user-name")[0].value,
+        "pw": user.getElementsByClassName("user-pw")[0].value,
+        "group": user.getElementsByClassName("user-group")[0].value,
+      }
+    }
+
+    function extractGroup(group) {
+      const act = group.getElementsByClassName("group-activated");
+
+      return {
+        "name": group.getElementsByClassName("group-name")[0].textContent,
+        "activated": act[0].options[act[0].selectedIndex].value
+      }
+    }
+
+    function addUser(user) {
+      $.ajax({
+        type: "POST",
+        url: "{{path_prefix}}" + "/add_user",
+        data: JSON.stringify(user),
+        contentType: "application/json; charset=utf-8",
+        dataType: "json",
+        success: (response) => {
+          swal({
+            icon: "success",
+            title: "Erfolgreich hinzugefügt.",
+            button: "Ok",
+          }).then((value) => {
+            window.location.reload();
+          });
+        },
+        error: (response) => {
+          swal({
+            icon: "error",
+            title: "Etwas hat nicht funktioniert",
+            text: "Ist der Name eindeutig?",
+            button: "Ok",
+          });
+        }
+      })
+    }
+
+    function updateUser(user, group) {
+      $.ajax({
+        type: "POST",
+        url: "{{path_prefix}}" + "/update_user",
+        data: JSON.stringify({ user, group }),
+        contentType: "application/json; charset=utf-8",
+        dataType: "json",
+        success: (response) => {
+          swal({
+            icon: "success",
+            title: "Erfolgreich aktualisiert.",
+            button: "Ok",
+          }).then((value) => {
+            window.location.reload();
+          });
+        },
+        error: (response) => {
+          swal({
+            icon: "error",
+            title: "Etwas hat nicht funktioniert",
+            button: "Ok",
+          });
+        }
+      })
+    }
+
+
+
+
+
+
+
+
+
+
+
+    function extractTask(task) {
+      const task_en = task.getElementsByClassName("task-enabled");
+      const name = task.getElementsByClassName("task-name")[0].textContent;
+      const order = task.getElementsByClassName("task-order")[0].value;
+      const enabled = task_en[0].options[task_en[0].selectedIndex].value;
+
+      const task_chatgpt = task.getElementsByClassName("task-chatgpt");
+
+      const chatgpt =
+        task_chatgpt[0].options[task_chatgpt[0].selectedIndex].value;
+
+      const description = task.getElementsByClassName("task-description")[0].value;
+
+      return { name, order, enabled, chatgpt, description };
+    }
+
+    function updateTasks(tasks) {
+      $.ajax({
+        type: "POST",
+        url: "{{path_prefix}}" + "/tasks",
+        data: JSON.stringify(tasks),
+        contentType: "application/json; charset=utf-8",
+        dataType: "json",
+        fail: (response) => {
+
+          swal({
+            icon: "error",
+            title: "Etwas hat nicht funktioniert",
+            button: "Ok",
+          });
+        }
+      }).done((response) => {
+        swal({
+          icon: "success",
+          title: "Erfolgreich aktualisiert.",
+          button: "Ok",
+        }).then((value) => {
+          window.location.reload();
+        });
+
+      });
+    }
+
+    function updateGroups(groups) {
+      $.ajax({
+        type: "POST",
+        url: "{{path_prefix}}" + "/groups",
+        data: JSON.stringify(groups),
+        contentType: "application/json; charset=utf-8",
+        dataType: "json",
+        fail: (response) => {
+          swal({
+            icon: "error",
+            title: "Etwas hat nicht funktioniert",
+            button: "Ok",
+          });
+        }
+      }).done((response) => {
+        swal({
+          icon: "success",
+          title: "Erfolgreich aktualisiert.",
+          button: "Ok",
+        }).then((value) => {
+          window.location.reload();
+        });
+
+      });
+    }
+
+
+
+    function addTask(task) {
+      $.ajax({
+        type: "POST",
+        url: "{{path_prefix}}" + "/tasks",
+        data: JSON.stringify(task),
+        contentType: "application/json; charset=utf-8",
+        dataType: "json",
+        success: (response) => {
+          swal({
+            icon: "success",
+            title: "Erfolgreich hinzugefügt.",
+            button: "Ok",
+          }).then((value) => {
+            window.location.reload();
+          });
+        },
+        error: (response) => {
+          swal({
+            icon: "error",
+            title: "Etwas hat nicht funktioniert",
+            text: "Ist der Name eindeutig?",
+            button: "Ok",
+          });
+
+        }
+      });
+    }
+
+    function generateTaskList() {
+      $.getJSON("{{path_prefix}}" + "/tasks", function (tasks) {
+        tasks.forEach((task) => {
+          appendTaskBox(task);
+        });
+      });
+    }
+
+    function appendTaskBox(task) {
+
+      enabled = `<select class="task-enabled" type="submit">
+          <option value="enabled" ${task.enabled === 1 ? "selected" : ""
+        }> Aktiviert </option>
+          <option value="disabled"${task.enabled === 1 ? "" : "selected"
+        }>Deaktiviert</option></select>`;
+
+      order = `<input type="number" class="task-order" value=${task.order}>`;
+      name = `<p class="task-name">${task["name"]}</p>`;
+      chatgpt = `<select class="task-chatgpt" type="submit">
+          <option value="enabled" ${task.chatgpt === 1 ? "selected" : ""
+        }>Aktiviert</option>
+          <option value="disabled"${task.chatgpt === 1 ? "" : "selected"
+        }>Deaktiviert</option></select>`;
+
+      description = `<input type="text" class="task-description" value="${task.description}">`;
+
+      html =
+        `<div class="task">` +
+        name +
+        enabled +
+        order +
+        chatgpt +
+        description +
+        `</div>`;
+
+      tasksElement = document.getElementById("tasks");
+      tasksElement.innerHTML = tasksElement.innerHTML + html;
+    }
+
+
+    function generateGroupList() {
+      $.ajax({
+        type: "GET",
+        url: "{{path_prefix}}" + "/groups"
+      }).done((data) => {
+        [...data].map((group) => { create_group_selection(group) })
+      });
+    }
+
+    function create_group_activation(group) {
+      groupsElement = document.getElementById("groups");
+
+      name = `<p class="group-name">${group[0]}</p>`
+      activated =
+        `<select class="group-activated" type="submit">
+              <option value="activated" ${group[1] === 1 ? "selected" : ""}> Aktiviert </option>
+              <option value="deactivated" ${group[1] === 1 ? "" : "selected"}> Deaktiviert</option></select>`
+
+      groupsElement.innerHTML += `<div class="group">` + name + activated + `</div>`
+    }
+
+    function create_group_selection(group) {
+      create_group_activation(group);
+
+      groupSelect = document.getElementById("user-group")
+      groupSelect.innerHTML = groupSelect.innerHTML + `<option value="${group[0]}">${group[0]}</option>`;
+
+      groupSelect = document.getElementById("user-group-select");
+      groupSelect.innerHTML = groupSelect.innerHTML + `<option value="${group[0]}">${group[0]}</option>`;
+    }
+
+    function create_user_update(users) {
+      idSelect = document.getElementById("user-ids-select")
+
+      console.log(users);
+      users = users.sort(function (a, b) { return a[0] - b[0]; });
+
+
+      for (let i = 0; i < users.length; i++) {
+        idSelect.innerHTML = idSelect.innerHTML + `<option value="${users[i][0]}" data-group="${users[i][1]}">${users[i][0]}</option>`;
+      }
+
+      display_selected_group();
+
+    }
+
+    function display_selected_group() {
+      groupSelect = document.getElementById("user-group-select");
+      idSelect = document.getElementById("user-ids-select");
+      groupSelect.value = idSelect.options[idSelect.selectedIndex].getAttribute("data-group");
+
+    }
+
+
+
+    function get_users() {
+      $.ajax({
+        type: "GET",
+        url: "{{path_prefix}}" + "/users"
+      }).done((data) => {
+        create_user_update([...data])//.map((name) => { create_user_update(name[0]) })
+      });
+    }
+
+    function set_random_values() {
+      name = "user_" + (Math.random() + 1).toString(36).substring(9);
+      pw = (Math.random() + 1).toString(36).substring(4);
+      task = "task_" + (Math.random() + 1).toString(36).substring(9);
+
+
+      taskEl = document.getElementById("new-task-name");
+      nameEl = document.getElementById("user-name");
+      pwEl = document.getElementById("user-pw");
+
+      nameEl.value = name;
+      pwEl.value = pw;
+      taskEl.value = task;
+
+
+    }
+    get_users();
+    set_random_values();
+    generateGroupList();
+    generateTaskList();
+  </script>
+</body>
+
+</html>

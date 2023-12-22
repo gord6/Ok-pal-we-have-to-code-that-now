@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Chatbot</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='styles/style-login.css') }}"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  </head>
+
+  <body>
+    <form action="login?" method="post" class="login-form" id="form">
+      <div class="login-container">
+        <label for="name"><b>Benutzername</b></label>
+        <input
+          type="text"
+          class="login-text"
+          placeholder="Benutzername eingeben"
+          name="name"
+          required
+        />
+
+        <label for="pw"><b>Passwort</b></label>
+        <input
+          type="password"
+          class="login-text"
+          placeholder="Passwort eingeben"
+          name="pw"
+          required
+        />
+
+        <button type="submit" class="submit-button">Einloggen</button>
+      </div>
+    </form>
+    <script>
+      form = document.getElementById("form");
+      form.action = window.location.pathname + window.location.search;
+    </script>
+  </body>
+</html>

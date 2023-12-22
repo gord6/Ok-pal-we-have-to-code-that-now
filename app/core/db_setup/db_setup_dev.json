@@ -1,0 +1,81 @@
+{
+  "tables": [
+    {
+      "name": "exc_groups",
+      "signature": "(name VARCHAR(50) PRIMARY KEY, activated INTEGER)"
+    },
+    {
+      "name": "tasks",
+      "signature": "(name VARCHAR(50) PRIMARY KEY, description TEXT, n_order INTEGER, enabled INTEGER, chatgpt INTEGER)"
+    },
+    {
+      "name": "users",
+      "signature": "(id VARCHAR(20) PRIMARY KEY, pw_hash VARCHAR(110), current_task VARCHAR(50), exc_group VARCHAR(50), consent INTEGER, CONSTRAINT fk_group FOREIGN KEY(exc_group) REFERENCES exc_groups(name), CONSTRAINT fk_currenttask FOREIGN KEY(current_task) REFERENCES tasks(name))"
+    },
+    {
+      "name": "submissions",
+      "signature": "(id SERIAL PRIMARY KEY, task VARCHAR(50), submission_type VARCHAR(20), code TEXT, filename TEXT, user_id VARCHAR(20), CONSTRAINT fk_user FOREIGN KEY(user_id) REFERENCES users(id), CONSTRAINT fk_task FOREIGN KEY(task) REFERENCES tasks(name))"
+    },
+    {
+      "name": "questionnaire",
+      "signature": "(id SERIAL PRIMARY KEY, task VARCHAR(50), user_id VARCHAR(20), feedback_easier INTEGER, feedback_confident INTEGER, feedback_fun INTEGER, CONSTRAINT fk_user FOREIGN KEY(user_id) REFERENCES users(id), CONSTRAINT fk_task FOREIGN KEY(task) REFERENCES tasks(name))"
+    },
+    {
+      "name": "prompts",
+      "signature": "(id SERIAL PRIMARY KEY, prompt TEXT,  answer TEXT, feedback VARCHAR(100), user_id VARCHAR(20), task_name VARCHAR(50), timestamp INTEGER, CONSTRAINT fk_user_prompt FOREIGN KEY(user_id) REFERENCES users(id), CONSTRAINT fk_task_promp FOREIGN KEY(task_name) REFERENCES tasks(name))"
+    },
+    {
+      "name": "actions",
+      "signature": "(id SERIAL PRIMARY KEY, user_id VARCHAR(20), task_name VARCHAR(50), timestamp INTEGER, action VARCHAR(50), CONSTRAINT fk_user_action FOREIGN KEY(user_id) REFERENCES users(id), CONSTRAINT fk_task_action FOREIGN KEY(task_name) REFERENCES tasks(name))"
+    }
+  ],
+  "data": {
+    "exc_groups": [
+      {
+        "name": "group1",
+        "activated": 0
+      },
+      {
+        "name": "group2",
+        "activated": 0
+      }
+    ],
+    "tasks": [
+      {
+        "name": "Aufgabe 1.1",
+        "description": "Ein gegebenes Wort soll in umgekehrter Reihenfolge zurückgegeben werden. <br><div>Ausgabe: <code>Datenstrukturen</code><br>Rückgabe: <code>nerutkurtsnetaD</code></div>",
+        "n_order": 1,
+        "enabled": 1,
+        "chatgpt": 1
+      },
+      {
+        "name": "Aufgabe 1.2",
+        "description": "Ein gegebenes Feld soll in umgekehrter Reihenfolge zurückgegeben werden. <br><br><div>Eingabe: <code>[1,2,3,4]</code><br>Ausgabe: <code>[4,3,2,1]</code></div>",
+        "n_order": 0,
+        "enabled": 1,
+        "chatgpt": 1
+      }
+    ],
+    "users": [
+      {
+        "id": "user1",
+        "pw_hash": "pbkdf2:sha256:1000000$NcC60CnGu7MrvTdW$ea5adde9a767c7ad58887a9145c9873f93b535c0fc2624fe1aac3ca712b697c5",
+        "exc_group": "group1",
+        "consent": 0
+      },
+      {
+        "id": "user2",
+        "pw_hash": "pbkdf2:sha256:1000000$NcC60CnGu7MrvTdW$ea5adde9a767c7ad58887a9145c9873f93b535c0fc2624fe1aac3ca712b697c5",
+        "exc_group": "group1",
+        "consent": 0
+      },
+      {
+        "id": "admin",
+        "pw_hash": "pbkdf2:sha256:1000000$NcC60CnGu7MrvTdW$ea5adde9a767c7ad58887a9145c9873f93b535c0fc2624fe1aac3ca712b697c5",
+        "exc_group": "group2",
+        "consent": 1
+      }
+    ],
+    "submissions": []
+  }
+}

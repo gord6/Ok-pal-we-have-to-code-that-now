@@ -1,0 +1,757 @@
+conversation_id,task,prompt_id,label
+0,1,222,Code generation
+0,1,232,Code generation
+0,1,289,Code generation
+0,1,292,Code generation
+1,4,712,Code generation
+1,4,713,Code generation
+1,4,714,Code refinement
+2,1,226,Code generation
+2,1,255,Code generation
+2,1,274,Code generation
+2,1,278,Code generation
+2,1,312,Code generation
+3,3,566,Code generation
+3,3,571,Code generation
+3,3,579,Code generation
+3,3,580,Code generation
+3,3,584,Code generation
+3,3,586,Code generation
+3,3,591,Code generation
+4,1,242,Basic prog. knowledge
+4,1,283,Code generation
+4,1,316,Basic prog. knowledge
+5,2,500,Concept comprehension
+5,2,515,Code generation
+6,1,13,Code generation
+6,1,19,Code generation
+6,1,23,Code generation
+6,1,26,Code generation
+6,1,32,Code generation
+6,1,38,Code generation
+6,1,52,Code generation
+6,1,53,Code generation
+6,1,55,Code generation
+6,1,56,Code generation
+6,1,57,Irrelevant
+7,1,71,Code generation
+7,1,80,Code generation
+7,1,88,Code refinement
+7,1,97,Code generation
+7,1,104,Code generation
+7,1,112,Code generation
+7,1,114,Code generation
+7,1,124,Code refinement
+7,1,133,Testing
+7,1,167,Testing
+7,1,184,Basic prog. knowledge
+8,1,61,Irrelevant
+8,1,78,Basic prog. knowledge
+8,1,87,Basic prog. knowledge
+8,1,150,Basic prog. knowledge
+8,1,153,Basic prog. knowledge
+8,1,157,Basic prog. knowledge
+8,1,163,Basic prog. knowledge
+8,1,170,Basic prog. knowledge
+8,1,194,Basic prog. knowledge
+9,1,73,Code generation
+9,1,81,Code generation
+9,1,99,Code generation
+9,1,105,Code generation
+9,1,123,Code refinement
+9,1,141,Code generation
+9,1,143,Irrelevant
+10,2,356,Incomplete
+10,2,366,Incomplete
+10,2,373,Code generation
+10,2,378,Code generation
+10,2,380,Code refinement
+10,2,385,Basic prog. knowledge
+10,2,390,Code comprehension
+10,2,395,Code comprehension
+10,2,458,Code generation
+11,4,645,Code generation
+11,4,662,Code generation
+11,4,668,Code generation
+11,4,696,Bug identification
+11,4,698,Bug identification
+11,4,699,Irrelevant
+12,1,200,Incomplete
+12,1,202,Code generation
+12,1,243,Code generation
+12,1,256,Code generation
+12,1,271,Code generation
+12,1,303,Code generation
+13,3,568,Code generation
+14,4,716,Code generation
+15,5,742,Code generation
+15,5,743,Code generation
+15,5,744,Code generation
+15,5,748,Code generation
+16,1,102,Code generation
+16,1,122,Code generation
+16,1,131,Code generation
+16,1,142,Code generation
+16,1,179,Code generation
+16,1,193,Testing
+17,2,371,Code generation
+17,2,376,Code generation
+17,2,399,Testing
+18,1,63,Irrelevant
+18,1,66,Code generation
+18,1,72,Code generation
+18,1,89,Code generation
+18,1,95,Code generation
+18,1,125,Code refinement
+18,1,129,Irrelevant
+18,1,145,Code refinement
+18,1,158,Code generation
+19,2,352,Incomplete
+19,2,353,Code generation
+19,2,354,Code generation
+19,2,360,Code refinement
+19,2,365,Code generation
+19,2,367,Code refinement
+19,2,383,Code refinement
+19,2,403,Code generation
+19,2,406,Code refinement
+19,2,443,Irrelevant
+19,2,450,Code generation
+19,2,454,Code refinement
+19,2,460,Code refinement
+20,3,519,Concept comprehension
+20,3,520,Code generation
+20,3,521,Code refinement
+20,3,526,Code generation
+20,3,531,Testing
+20,3,535,Code generation
+20,3,539,Code generation
+20,3,540,Bug identification
+20,3,542,Bug identification
+20,3,550,Code generation
+20,3,552,Bug identification
+20,3,554,Code generation
+20,3,557,Code generation
+20,3,560,Code generation
+21,4,633,Code generation
+21,4,634,Code generation
+21,4,641,Code refinement
+21,4,643,Code refinement
+21,4,644,Code generation
+21,4,649,Code generation
+21,4,660,Code generation
+21,4,661,Code refinement
+21,4,664,Code generation
+21,4,667,Code refinement
+21,4,692,Code refinement
+21,4,695,Irrelevant
+21,4,703,Testing
+22,1,62,Irrelevant
+22,1,75,Basic prog. knowledge
+22,1,111,Basic prog. knowledge
+22,1,118,Basic prog. knowledge
+22,1,175,Basic prog. knowledge
+22,1,183,Code generation
+22,1,188,Bug identification
+23,2,351,Irrelevant
+23,2,396,Code generation
+23,2,405,Code refinement
+24,4,640,Concept comprehension
+24,4,656,Code generation
+24,4,684,Code generation
+24,4,688,Concept comprehension
+25,5,739,Other
+25,5,740,Other
+26,1,49,Irrelevant
+27,2,345,Basic prog. knowledge
+28,1,11,Code generation
+28,1,21,Code generation
+28,1,35,Code generation
+28,1,42,Code generation
+28,1,44,Code generation
+29,2,337,Basic prog. knowledge
+30,3,474,Incomplete
+30,3,476,Code generation
+30,3,479,Code refinement
+30,3,480,Code generation
+30,3,491,Code generation
+30,3,492,Incomplete
+31,4,614,Code comprehension
+31,4,619,Code comprehension
+31,4,620,Incomplete
+31,4,622,Code generation
+31,4,626,Code refinement
+31,4,627,Bug identification
+31,4,629,Bug identification
+31,4,631,Code comprehension
+32,1,201,Irrelevant
+32,1,215,Code generation
+32,1,220,Code generation
+32,1,238,Code generation
+32,1,249,Code generation
+32,1,265,Code generation
+32,1,301,Code generation
+33,1,210,Code generation
+33,1,244,Code generation
+34,3,564,Code generation
+34,3,567,Code generation
+34,3,569,Code generation
+34,3,574,Code generation
+34,3,577,Code refinement
+34,3,583,Code refinement
+34,3,589,Code generation
+34,3,593,Code generation
+34,3,596,Code generation
+35,5,745,Code generation
+35,5,746,Code generation
+35,5,747,Code generation
+35,5,749,Code generation
+35,5,750,Code refinement
+36,7,791,Code generation
+36,7,796,Code generation
+36,7,798,Code generation
+36,7,802,Code generation
+37,1,9,Code generation
+37,1,27,Code comprehension
+37,1,37,Code generation
+37,1,39,Code comprehension
+37,1,43,Code generation
+38,1,86,Code generation
+38,1,101,Code generation
+38,1,121,Code generation
+38,1,128,Code generation
+38,1,135,Code comprehension
+38,1,146,Code generation
+38,1,162,Code generation
+38,1,165,Code generation
+38,1,176,Incomplete
+38,1,192,Bug identification
+39,2,358,Basic prog. knowledge
+39,2,422,Basic prog. knowledge
+39,2,442,Incomplete
+39,2,447,Testing
+40,1,235,Incomplete
+40,1,239,Incomplete
+40,1,261,Incomplete
+41,1,214,Code generation
+41,1,219,Code generation
+41,1,246,Code generation
+42,2,499,Code generation
+42,2,518,Code generation
+43,3,572,Code generation
+43,3,573,Code generation
+43,3,576,Code generation
+43,3,594,Code generation
+43,3,602,Code generation
+43,3,605,Code generation
+43,3,606,Code generation
+43,3,607,Code generation
+43,3,608,Code generation
+43,3,609,Code generation
+43,3,611,Code generation
+44,4,719,Code generation
+44,4,721,Code comprehension
+44,4,733,Code generation
+44,4,738,Code generation
+45,7,789,Code generation
+45,7,790,Code generation
+45,7,792,Code generation
+45,7,793,Code generation
+45,7,794,Code generation
+45,7,795,Code generation
+45,7,800,Irrelevant
+45,7,806,Code generation
+46,1,15,Code generation
+46,1,22,Basic prog. knowledge
+46,1,24,Code generation
+46,1,30,Bug identification
+46,1,33,Code generation
+46,1,41,Basic prog. knowledge
+46,1,46,Code generation
+47,2,517,Bug identification
+48,3,581,Code generation
+48,3,590,Code generation
+48,3,597,Code generation
+48,3,600,Code comprehension
+48,3,604,Code generation
+49,4,729,Incomplete
+49,4,730,Code comprehension
+49,4,735,Code comprehension
+49,4,737,Incomplete
+50,1,221,Irrelevant
+50,1,262,Code generation
+50,1,288,Code generation
+50,1,294,Basic prog. knowledge
+50,1,298,Code generation
+50,1,310,Code generation
+50,1,321,Code generation
+50,1,325,Code comprehension
+50,1,328,Code comprehension
+50,1,331,Basic prog. knowledge
+51,1,77,Code generation
+51,1,85,Incomplete
+51,1,90,Code generation
+51,1,100,Code generation
+51,1,107,Code generation
+51,1,115,Code generation
+51,1,130,Code generation
+51,1,136,Code comprehension
+52,2,349,Irrelevant
+52,2,350,Irrelevant
+52,2,359,Code generation
+52,2,362,Incomplete
+52,2,370,Incomplete
+52,2,393,Testing
+52,2,440,Bug identification
+52,2,456,Code generation
+52,2,466,Code generation
+53,6,770,Basic prog. knowledge
+53,6,771,Basic prog. knowledge
+53,6,772,Basic prog. knowledge
+53,6,773,Basic prog. knowledge
+54,1,109,Basic prog. knowledge
+54,1,126,Basic prog. knowledge
+54,1,134,Basic prog. knowledge
+54,1,168,Basic prog. knowledge
+55,2,374,Code generation
+55,2,384,Code generation
+55,2,388,Testing
+55,2,398,Code generation
+55,2,457,Bug identification
+55,2,469,Concept comprehension
+56,3,527,Code generation
+56,3,533,Code generation
+56,3,543,Code generation
+56,3,556,Code generation
+56,3,561,Code generation
+57,4,666,Basic prog. knowledge
+57,4,686,Code generation
+57,4,707,Concept comprehension
+58,1,3,Irrelevant
+58,1,48,Bug identification
+59,2,342,Code generation
+59,2,344,Basic prog. knowledge
+60,3,472,Concept comprehension
+60,3,473,Concept comprehension
+60,3,475,Concept comprehension
+60,3,477,Concept comprehension
+60,3,478,Concept comprehension
+60,3,484,Code comprehension
+60,3,489,Basic prog. knowledge
+60,3,490,Bug identification
+60,3,493,Basic prog. knowledge
+61,4,613,Basic prog. knowledge
+61,4,616,Basic prog. knowledge
+61,4,618,Other
+61,4,624,Other
+61,4,630,Bug identification
+62,4,709,Incomplete
+62,4,710,Code comprehension
+62,4,711,Incomplete
+63,1,227,Irrelevant
+63,1,230,Irrelevant
+63,1,284,Code generation
+63,1,302,Code generation
+63,1,313,Code generation
+63,1,317,Code generation
+63,1,323,Code generation
+64,3,610,Code generation
+65,4,720,Code generation
+65,4,726,Code generation
+66,1,51,Irrelevant
+67,2,335,Irrelevant
+68,3,495,Irrelevant
+68,3,496,Irrelevant
+69,4,628,Irrelevant
+70,1,231,Code generation
+70,1,237,Code generation
+70,1,251,Code generation
+70,1,260,Code generation
+70,1,264,Code generation
+70,1,277,Code generation
+71,3,565,Code generation
+71,3,570,Code refinement
+71,3,575,Code generation
+71,3,578,Code generation
+71,3,582,Code generation
+71,3,588,Code refinement
+71,3,592,Code generation
+71,3,595,Code generation
+71,3,598,Code generation
+71,3,599,Code generation
+71,3,603,Code generation
+72,7,797,Code generation
+72,7,799,Code generation
+72,7,801,Code comprehension
+72,7,803,Code generation
+72,7,804,Code comprehension
+72,7,805,Code generation
+72,7,807,Code generation
+72,7,808,Code generation
+72,7,809,Irrelevant
+72,7,810,Irrelevant
+72,7,811,Concept comprehension
+73,1,197,Code generation
+73,1,198,Code generation
+73,1,199,Code generation
+73,1,213,Code generation
+73,1,229,Code generation
+73,1,233,Code generation
+73,1,245,Code generation
+73,1,257,Code generation
+73,1,263,Code generation
+73,1,275,Code generation
+73,1,291,Code refinement
+74,1,207,Basic prog. knowledge
+74,1,241,Code generation
+74,1,266,Basic prog. knowledge
+74,1,306,Basic prog. knowledge
+75,2,502,Code generation
+75,2,512,Basic prog. knowledge
+76,1,225,Code generation
+76,1,272,Code generation
+76,1,285,Code generation
+76,1,295,Code refinement
+76,1,300,Code comprehension
+76,1,307,Bug identification
+77,1,47,Incomplete
+78,2,343,Irrelevant
+78,2,346,Code generation
+79,4,612,Code generation
+79,4,615,Code generation
+79,4,621,Code comprehension
+79,4,623,Code generation
+79,4,625,Code generation
+80,6,753,Bug identification
+80,6,754,Bug identification
+80,6,759,Bug identification
+80,6,760,Bug identification
+80,6,763,Bug identification
+81,7,776,Code generation
+81,7,777,Code comprehension
+81,7,780,Code comprehension
+81,7,784,Code generation
+81,7,785,Incomplete
+81,7,786,Code generation
+81,7,787,Bug identification
+82,1,209,Basic prog. knowledge
+82,1,250,Basic prog. knowledge
+82,1,282,Basic prog. knowledge
+83,2,401,Irrelevant
+83,2,402,Incomplete
+83,2,441,Bug identification
+83,2,445,Basic prog. knowledge
+83,2,448,Bug identification
+83,2,464,Basic prog. knowledge
+83,2,471,Basic prog. knowledge
+84,1,236,Irrelevant
+84,1,269,Code generation
+84,1,276,Code generation
+84,1,287,Code generation
+84,1,290,Code generation
+84,1,299,Code generation
+84,1,309,Code generation
+84,1,315,Irrelevant
+85,2,498,Irrelevant
+85,2,501,Irrelevant
+85,2,503,Testing
+85,2,504,Incomplete
+85,2,505,Testing
+85,2,506,Testing
+85,2,507,Testing
+85,2,508,Testing
+85,2,509,Testing
+85,2,510,Testing
+85,2,511,Incomplete
+85,2,513,Code comprehension
+85,2,514,Testing
+85,2,516,Testing
+86,4,718,Code generation
+86,4,722,Code generation
+86,4,723,Testing
+86,4,728,Code refinement
+86,4,731,Code refinement
+86,4,734,Testing
+86,4,736,Testing
+87,1,203,Code generation
+87,1,216,Code generation
+87,1,228,Code generation
+87,1,240,Code generation
+87,1,254,Code generation
+87,1,308,Code refinement
+88,1,59,Irrelevant
+88,1,92,Code generation
+88,1,151,Code generation
+88,1,154,Code generation
+88,1,160,Code generation
+88,1,180,Code generation
+88,1,185,Code generation
+89,2,361,Basic prog. knowledge
+89,2,382,Basic prog. knowledge
+89,2,389,Basic prog. knowledge
+89,2,392,Basic prog. knowledge
+89,2,452,Basic prog. knowledge
+90,4,635,Concept comprehension
+90,4,637,Code generation
+90,4,639,Code refinement
+90,4,646,Code comprehension
+90,4,652,Code generation
+90,4,654,Irrelevant
+90,4,655,Irrelevant
+90,4,669,Code generation
+90,4,690,Basic prog. knowledge
+90,4,693,Basic prog. knowledge
+90,4,708,Code generation
+91,1,212,Code comprehension
+91,1,253,Basic prog. knowledge
+91,1,296,Incomplete
+91,1,311,Basic prog. knowledge
+92,3,563,Irrelevant
+92,3,585,Code generation
+92,3,587,Code generation
+92,3,601,Code generation
+93,4,715,Concept comprehension
+93,4,717,Code generation
+93,4,724,Code generation
+93,4,725,Code comprehension
+93,4,727,Testing
+93,4,732,Code generation
+94,1,60,Irrelevant
+94,1,69,Concept comprehension
+94,1,94,Basic prog. knowledge
+94,1,113,Basic prog. knowledge
+94,1,120,Basic prog. knowledge
+94,1,171,Code generation
+94,1,195,Basic prog. knowledge
+95,2,363,Basic prog. knowledge
+95,2,368,Basic prog. knowledge
+95,2,381,Basic prog. knowledge
+95,2,459,Basic prog. knowledge
+95,2,467,Basic prog. knowledge
+96,3,528,Basic prog. knowledge
+96,3,530,Basic prog. knowledge
+96,3,538,Basic prog. knowledge
+96,3,545,Bug identification
+96,3,547,Code comprehension
+96,3,562,Code generation
+97,4,642,Code generation
+97,4,651,Code generation
+97,4,658,Basic prog. knowledge
+97,4,685,Basic prog. knowledge
+97,4,694,Code generation
+97,4,697,Code refinement
+97,4,701,Code generation
+97,4,704,Code generation
+98,1,64,Basic prog. knowledge
+98,1,70,Code generation
+98,1,76,Code generation
+98,1,83,Code generation
+98,1,93,Code generation
+98,1,98,Code refinement
+98,1,108,Code generation
+98,1,132,Testing
+98,1,149,Testing
+98,1,173,Irrelevant
+99,2,355,Code generation
+99,2,369,Code generation
+99,2,377,Code generation
+99,2,387,Code generation
+99,2,400,Code generation
+99,2,414,Code generation
+99,2,444,Code generation
+99,2,446,Code refinement
+99,2,462,Irrelevant
+100,3,522,Irrelevant
+100,3,523,Code generation
+100,3,525,Code generation
+100,3,529,Code generation
+100,3,532,Code generation
+100,3,536,Code generation
+100,3,541,Code generation
+100,3,548,Code generation
+100,3,551,Testing
+100,3,555,Bug identification
+100,3,558,Code generation
+100,3,559,Irrelevant
+101,4,636,Code generation
+101,4,647,Code generation
+101,4,650,Code refinement
+101,4,653,Code comprehension
+101,4,659,Code generation
+101,4,663,Code generation
+101,4,670,Code refinement
+101,4,689,Code refinement
+101,4,702,Testing
+101,4,705,Bug identification
+101,4,706,Irrelevant
+102,1,65,Irrelevant
+102,1,67,Basic prog. knowledge
+102,1,103,Basic prog. knowledge
+102,1,117,Code generation
+102,1,139,Code generation
+102,1,186,Code generation
+102,1,191,Basic prog. knowledge
+103,2,391,Irrelevant
+103,2,451,Code generation
+103,2,465,Basic prog. knowledge
+104,1,5,Code generation
+104,1,6,Code refinement
+104,1,10,Code refinement
+104,1,14,Code generation
+104,1,17,Code generation
+104,1,25,Code generation
+104,1,31,Irrelevant
+104,1,50,Irrelevant
+105,3,482,Concept comprehension
+105,3,483,Incomplete
+105,3,485,Incomplete
+105,3,486,Incomplete
+105,3,487,Code generation
+105,3,488,Code generation
+105,3,494,Bug identification
+105,3,497,Bug identification
+106,4,632,Irrelevant
+107,6,761,Incomplete
+107,6,762,Incomplete
+107,6,765,Incomplete
+107,6,767,Irrelevant
+107,6,768,Basic prog. knowledge
+107,6,769,Code generation
+108,1,206,Basic prog. knowledge
+108,1,223,Code generation
+108,1,270,Code generation
+108,1,281,Basic prog. knowledge
+109,1,4,Code generation
+109,1,7,Code generation
+109,1,12,Code generation
+109,1,16,Code refinement
+109,1,18,Code generation
+109,1,20,Code refinement
+109,1,34,Code refinement
+109,1,36,Code refinement
+109,1,45,Code refinement
+110,3,481,Basic prog. knowledge
+111,1,58,Irrelevant
+111,1,79,Code generation
+111,1,91,Code generation
+111,1,110,Code generation
+111,1,137,Code generation
+111,1,147,Code generation
+111,1,155,Code generation
+111,1,174,Code generation
+111,1,177,Incomplete
+111,1,178,Incomplete
+111,1,182,Testing
+112,4,638,Code generation
+112,4,648,Code generation
+112,4,657,Testing
+112,4,665,Bug identification
+112,4,687,Testing
+112,4,691,Bug identification
+112,4,700,Bug identification
+113,1,8,Basic prog. knowledge
+113,1,28,Basic prog. knowledge
+113,1,29,Basic prog. knowledge
+114,2,336,Concept comprehension
+114,2,338,Concept comprehension
+114,2,339,Basic prog. knowledge
+114,2,340,Basic prog. knowledge
+114,2,341,Bug identification
+115,6,751,Code comprehension
+115,6,752,Basic prog. knowledge
+115,6,755,Basic prog. knowledge
+115,6,756,Basic prog. knowledge
+115,6,757,Basic prog. knowledge
+115,6,758,Basic prog. knowledge
+115,6,764,Basic prog. knowledge
+115,6,766,Basic prog. knowledge
+116,7,774,Concept comprehension
+116,7,775,Code generation
+116,7,778,Code generation
+116,7,779,Code generation
+116,7,781,Code generation
+116,7,782,Code generation
+116,7,783,Code generation
+116,7,788,Code comprehension
+117,1,204,Basic prog. knowledge
+117,1,208,Code generation
+117,1,211,Code comprehension
+117,1,218,Code generation
+117,1,234,Code generation
+117,1,247,Code generation
+117,1,268,Basic prog. knowledge
+117,1,280,Testing
+118,1,205,Code generation
+118,1,248,Code generation
+118,1,259,Code generation
+118,1,314,Code refinement
+118,1,322,Code generation
+118,1,326,Code generation
+118,1,330,Code generation
+119,1,224,Basic prog. knowledge
+119,1,267,Basic prog. knowledge
+119,1,279,Basic prog. knowledge
+119,1,293,Bug identification
+119,1,304,Bug identification
+119,1,319,Code generation
+120,2,375,Basic prog. knowledge
+120,2,449,Incomplete
+120,2,468,Incomplete
+120,2,470,Code generation
+121,5,741,Incomplete
+122,1,217,Code generation
+122,1,258,Code generation
+122,1,273,Basic prog. knowledge
+122,1,286,Basic prog. knowledge
+122,1,297,Code generation
+122,1,305,Code generation
+122,1,318,Code generation
+122,1,320,Code generation
+122,1,324,Code generation
+122,1,327,Code generation
+122,1,329,Code generation
+123,1,68,Code generation
+123,1,82,Basic prog. knowledge
+123,1,84,Code generation
+123,1,116,Incomplete
+123,1,127,Incomplete
+123,1,138,Code generation
+123,1,144,Incomplete
+123,1,152,Code refinement
+123,1,156,Code refinement
+123,1,159,Bug identification
+123,1,161,Bug identification
+123,1,164,Bug identification
+123,1,169,Incomplete
+123,1,172,Bug identification
+123,1,187,Incomplete
+123,1,190,Code refinement
+124,2,348,Irrelevant
+124,2,372,Code generation
+124,2,379,Code generation
+124,2,386,Incomplete
+124,2,397,Code generation
+124,2,404,Code generation
+124,2,453,Code generation
+124,2,463,Code generation
+125,3,524,Incomplete
+125,3,534,Code generation
+125,3,537,Code generation
+125,3,544,Code generation
+125,3,546,Code generation
+125,3,549,Code generation
+125,3,553,Code generation
+126,1,96,Code generation
+126,1,106,Testing
+126,1,140,Code refinement
+126,1,148,Bug identification
+126,1,166,Code generation
+126,1,181,Code generation
+126,1,189,Code generation
+127,2,357,Code generation
+127,2,364,Code generation
+127,2,394,Testing
+127,2,455,Code refinement
+127,2,461,Bug identification
+128,1,74,Irrelevant
+128,1,119,Code generation

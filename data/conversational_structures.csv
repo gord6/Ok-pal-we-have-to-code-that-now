@@ -1,0 +1,120 @@
+conversation_id,purpose_blocks,structure,intention
+80.0,['Bug identification'],S6,tutoring
+47.0,['Bug identification'],S6,tutoring
+58.0,['Bug identification'],S6,tutoring
+62.0,['Code comprehension'],S5,tutoring
+49.0,['Code comprehension'],S5,tutoring
+33.0,['Code generation'],S1,solution generation
+36.0,['Code generation'],S1,solution generation
+41.0,['Code generation'],S1,solution generation
+42.0,['Code generation'],S1,solution generation
+43.0,['Code generation'],S1,solution generation
+45.0,['Code generation'],S1,solution generation
+56.0,['Code generation'],S1,solution generation
+63.0,['Code generation'],S1,solution generation
+64.0,['Code generation'],S1,solution generation
+65.0,['Code generation'],S1,solution generation
+70.0,['Code generation'],S1,solution generation
+78.0,['Code generation'],S1,solution generation
+84.0,['Code generation'],S1,solution generation
+88.0,['Code generation'],S1,solution generation
+92.0,['Code generation'],S1,solution generation
+124.0,['Code generation'],S1,solution generation
+125.0,['Code generation'],S1,solution generation
+32.0,['Code generation'],S1,solution generation
+28.0,['Code generation'],S1,solution generation
+0.0,['Code generation'],S1,solution generation
+128.0,['Code generation'],S1,solution generation
+2.0,['Code generation'],S1,solution generation
+3.0,['Code generation'],S1,solution generation
+6.0,['Code generation'],S1,solution generation
+12.0,['Code generation'],S1,solution generation
+13.0,['Code generation'],S1,solution generation
+14.0,['Code generation'],S1,solution generation
+15.0,['Code generation'],S1,solution generation
+51.0,"['Code generation', 'Code comprehension']",S11,mixed
+48.0,"['Code generation', 'Code comprehension', 'Code generation']",S11,mixed
+44.0,"['Code generation', 'Code comprehension', 'Code generation']",S11,mixed
+79.0,"['Code generation', 'Code comprehension', 'Code generation']",S11,mixed
+37.0,"['Code generation', 'Code comprehension', 'Code generation', 'Code comprehension', 'Code generation']",S11,mixed
+111.0,"['Code generation', 'Testing']",S2b,solution generation
+17.0,"['Code generation', 'Testing']",S2b,solution generation
+16.0,"['Code generation', 'Testing']",S2b,solution generation
+104.0,"['Code generation', 'Code refinement', 'Code generation']",S2a,solution generation
+71.0,"['Code generation', 'Code refinement', 'Code generation', 'Code refinement', 'Code generation']",S2a,solution generation
+109.0,"['Code generation', 'Code refinement', 'Code generation', 'Code refinement']",S2a,solution generation
+73.0,"['Code generation', 'Code refinement']",S2a,solution generation
+118.0,"['Code generation', 'Code refinement', 'Code generation']",S2a,solution generation
+9.0,"['Code generation', 'Code refinement', 'Code generation']",S2a,solution generation
+87.0,"['Code generation', 'Code refinement']",S2a,solution generation
+99.0,"['Code generation', 'Code refinement']",S2a,solution generation
+34.0,"['Code generation', 'Code refinement', 'Code generation']",S2a,solution generation
+35.0,"['Code generation', 'Code refinement']",S2a,solution generation
+1.0,"['Code generation', 'Code refinement']",S2a,solution generation
+30.0,"['Code generation', 'Code refinement', 'Code generation']",S2a,solution generation
+18.0,"['Code generation', 'Code refinement', 'Code generation']",S2a,solution generation
+19.0,"['Code generation', 'Code refinement', 'Code generation', 'Code refinement', 'Code generation', 'Code refinement', 'Code generation', 'Code refinement']",S2a,solution generation
+23.0,"['Code generation', 'Code refinement']",S2a,solution generation
+93.0,"['Concept comprehension', 'Code generation', 'Code comprehension', 'Testing', 'Code generation']",S13,mixed
+94.0,"['Concept comprehension', 'Docs querying', 'Code generation', 'Docs querying']",S13,mixed
+96.0,"['Docs querying', 'Bug identification', 'Code comprehension', 'Code generation']",S13,mixed
+97.0,"['Code generation', 'Docs querying', 'Code generation', 'Code refinement', 'Code generation']",S13,mixed
+98.0,"['Docs querying', 'Code generation', 'Code refinement', 'Code generation', 'Testing']",S13,mixed
+90.0,"['Concept comprehension', 'Code generation', 'Code refinement', 'Code comprehension', 'Code generation', 'Docs querying', 'Code generation']",S13,mixed
+39.0,"['Docs querying', 'Testing']",S8a,tutoring
+101.0,"['Code generation', 'Code refinement', 'Code comprehension', 'Code generation', 'Code refinement', 'Testing', 'Bug identification']",S13,mixed
+105.0,"['Concept comprehension', 'Code generation', 'Bug identification']",S13,mixed
+86.0,"['Code generation', 'Testing', 'Code refinement', 'Testing']",S3,solution generation
+112.0,"['Code generation', 'Testing', 'Bug identification', 'Testing', 'Bug identification']",S3,solution generation
+114.0,"['Concept comprehension', 'Docs querying', 'Bug identification']",S9,tutoring
+116.0,"['Concept comprehension', 'Code generation', 'Code comprehension']",S13,mixed
+117.0,"['Docs querying', 'Code generation', 'Code comprehension', 'Code generation', 'Docs querying', 'Testing']",S13,mixed
+119.0,"['Docs querying', 'Bug identification', 'Code generation']",S13,mixed
+123.0,"['Code generation', 'Docs querying', 'Code generation', 'Code refinement', 'Bug identification', 'Code refinement']",S13,mixed
+126.0,"['Code generation', 'Testing', 'Code refinement', 'Bug identification', 'Code generation']",S3,solution generation
+100.0,"['Code generation', 'Testing', 'Bug identification', 'Code generation']",S3,solution generation
+38.0,"['Code generation', 'Code comprehension', 'Code generation', 'Bug identification']",S13,mixed
+85.0,"['Testing', 'Code comprehension', 'Testing']",S8b,tutoring
+60.0,"['Concept comprehension', 'Code comprehension', 'Docs querying', 'Bug identification', 'Docs querying']",S9,tutoring
+127.0,"['Code generation', 'Testing', 'Code refinement', 'Bug identification']",S3,solution generation
+72.0,"['Code generation', 'Code comprehension', 'Code generation', 'Code comprehension', 'Code generation', 'Concept comprehension']",S13,mixed
+31.0,"['Code comprehension', 'Code generation', 'Code refinement', 'Bug identification', 'Code comprehension']",S13,mixed
+57.0,"['Docs querying', 'Code generation', 'Concept comprehension']",S13,mixed
+22.0,"['Docs querying', 'Code generation', 'Bug identification']",S13,mixed
+76.0,"['Code generation', 'Code refinement', 'Code comprehension', 'Bug identification']",S13,mixed
+10.0,"['Code generation', 'Code refinement', 'Docs querying', 'Code comprehension', 'Code generation']",S13,mixed
+55.0,"['Code generation', 'Testing', 'Code generation', 'Bug identification', 'Concept comprehension']",S13,mixed
+7.0,"['Code generation', 'Code refinement', 'Code generation', 'Code refinement', 'Testing', 'Docs querying']",S13,mixed
+21.0,"['Code generation', 'Code refinement', 'Code generation', 'Code refinement', 'Code generation', 'Code refinement', 'Testing']",S3,solution generation
+50.0,"['Code generation', 'Docs querying', 'Code generation', 'Code comprehension', 'Docs querying']",S13,mixed
+20.0,"['Concept comprehension', 'Code generation', 'Code refinement', 'Code generation', 'Testing', 'Code generation', 'Bug identification', 'Code generation', 'Bug identification', 'Code generation']",S13,mixed
+81.0,"['Code generation', 'Code comprehension', 'Code generation', 'Bug identification']",S13,mixed
+46.0,"['Code generation', 'Docs querying', 'Code generation', 'Bug identification', 'Code generation', 'Docs querying', 'Code generation']",S13,mixed
+52.0,"['Code generation', 'Testing', 'Bug identification', 'Code generation']",S3,solution generation
+11.0,"['Code generation', 'Bug identification']",S2c,solution generation
+5.0,"['Concept comprehension', 'Code generation']",S12,mixed
+24.0,"['Concept comprehension', 'Code generation', 'Concept comprehension']",S12,mixed
+27.0,['Docs querying'],S4,tutoring
+82.0,['Docs querying'],S4,tutoring
+89.0,['Docs querying'],S4,tutoring
+110.0,['Docs querying'],S4,tutoring
+53.0,['Docs querying'],S4,tutoring
+95.0,['Docs querying'],S4,tutoring
+113.0,['Docs querying'],S4,tutoring
+54.0,['Docs querying'],S4,tutoring
+8.0,['Docs querying'],S4,tutoring
+29.0,['Docs querying'],S4,tutoring
+61.0,"['Docs querying', 'Bug identification']",S7a,tutoring
+83.0,"['Bug identification', 'Docs querying', 'Bug identification', 'Docs querying']",S7a,tutoring
+91.0,"['Code comprehension', 'Docs querying']",S7b,tutoring
+115.0,"['Code comprehension', 'Docs querying']",S7b,tutoring
+74.0,"['Docs querying', 'Code generation', 'Docs querying']",S10,mixed
+59.0,"['Code generation', 'Docs querying']",S10,mixed
+120.0,"['Docs querying', 'Code generation']",S10,mixed
+122.0,"['Code generation', 'Docs querying', 'Code generation']",S10,mixed
+108.0,"['Docs querying', 'Code generation', 'Docs querying']",S10,mixed
+4.0,"['Docs querying', 'Code generation', 'Docs querying']",S10,mixed
+107.0,"['Docs querying', 'Code generation']",S10,mixed
+103.0,"['Code generation', 'Docs querying']",S10,mixed
+75.0,"['Code generation', 'Docs querying']",S10,mixed
+102.0,"['Docs querying', 'Code generation', 'Docs querying']",S10,mixed

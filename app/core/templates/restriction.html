@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Chatbot</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='styles/style-start.css') }}"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  </head>
+
+  <body>
+    <!-- partial:index.partial.html -->
+    <section class="start">
+      <header class="start-header"></header>
+      <main class="main">
+        <div class="task-title"><b>{{title}}</b></div>
+
+        <p class="task-description">{{description}}</p>
+      </main>
+    </section>
+  </body>
+</html>

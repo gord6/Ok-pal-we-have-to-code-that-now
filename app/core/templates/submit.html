@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Chatbot</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles/style-submit.css') }}" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.form/4.3.0/jquery.form.min.js"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</head>
+
+<body>
+  <!-- partial:index.partial.html -->
+  <section class="submit">
+    <header class="submit-header">
+      <div class="submit-header-title">
+        Lösung für <b>{{task_nr|safe}}</b> abgeben
+      </div>
+    </header>
+    <main>
+      <form class="submit-form" action="submit" enctype="multipart/form-data" method="post" id="submit-form">
+        <div class="submit-div">
+          <p class="upload-instruction">
+            Bitte laden Sie hier Ihre Lösung hoch.
+          </p>
+          <label class="file-input" for="solution">Lösung hochladen</label>
+          <input class="solution-input" type="file" id="solution" name="solution" multiple required />
+          <p class="solution-upload">Noch keine Datei hochgeladen.</p>
+        </div>
+        <div class="submit-div">
+          <p class="upload-instruction">
+            Bitte laden Sie hier Ihre VSCode History hoch.
+          </p>
+          <label class="file-input" for="history">History hochladen</label>
+          <input class="history-input" type="file" id="history" name="history" multiple />
+          <p class="history-upload">Noch keine Datei hochgeladen.</p>
+        </div>
+        <div class="questionnaire-header">
+          <p><b>Fragebogen</b></p>
+          <br />
+          <p class="likert-header">
+            Wir interessieren uns außerdem für Ihr Erleben und Ihre Meinung.
+            Bitte schätzen Sie die folgenden Aussagen ein:
+          </p>
+        </div>
+        <div class="likert-div">
+          <p class="likert-quest">Das Lösen der Aufgabe fiel mir leicht.</p>
+          <ul class="likert" id="easier-likert">
+            <li>Stimme zu</li>
+            <li><input type="radio" name="easier" value="1" required /></li>
+            <li><input type="radio" name="easier" value="2" required /></li>
+            <li><input type="radio" name="easier" value="3" required /></li>
+            <li><input type="radio" name="easier" value="4" required /></li>
+            <li><input type="radio" name="easier" value="5" required /></li>
+            <li>Stimme nicht zu</li>
+          </ul>
+        </div>
+
+        <div class="likert-div">
+          <p class="likert-quest">
+            Ich bin mir sicher, dass meine Lösung korrekt ist.
+          </p>
+          <ul class="likert" id="confident-likert">
+            <li>Stimme zu</li>
+            <li>
+              <input type="radio" name="confident" value="1" required />
+            </li>
+            <li>
+              <input type="radio" name="confident" value="2" required />
+            </li>
+            <li>
+              <input type="radio" name="confident" value="3" required />
+            </li>
+            <li>
+              <input type="radio" name="confident" value="4" required />
+            </li>
+            <li>
+              <input type="radio" name="confident" value="5" required />
+            </li>
+            <li>Stimme nicht zu</li>
+          </ul>
+        </div>
+
+        <div class="likert-div">
+          <p class="likert-quest">
+            Das Bearbeiten der Aufgabe hat mir Spaß gemacht.
+          </p>
+          <ul class="likert" id="fun-likert">
+            <li>Stimme zu</li>
+            <li><input type="radio" name="fun" value="1" required /></li>
+            <li><input type="radio" name="fun" value="2" required /></li>
+            <li><input type="radio" name="fun" value="3" required /></li>
+            <li><input type="radio" name="fun" value="4" required /></li>
+            <li><input type="radio" name="fun" value="5" required /></li>
+            <li>Stimme nicht zu</li>
+          </ul>
+        </div>
+        <button class="submit-button" id="submit">Lösung abgeben</button>
+      </form>
+    </main>
+  </section>
+
+  <script>
+    function get(selector, root = document) {
+      return root.querySelector(selector);
+    }
+
+    const solutionFileUpload = get(".solution-input");
+    const solutionFilePreview = get(".solution-upload");
+    const historyFileUpload = get(".history-input");
+    const historyFilePreview = get(".history-upload");
+    const submitButton = document.getElementById("submit");
+    const form = document.getElementById("submit-form");
+
+    submitButton.addEventListener("click", (event) => {
+      event.preventDefault();
+      if (solutionFileUpload.files.length == 0) {
+        swal({
+          icon: "warning",
+          title: "Abgabe unvollständig",
+          text: "Bitte laden Sie mindestens eine Datei als Lösung hoch.",
+        });
+      } else if (
+        !(noDots(historyFileUpload.files) && noDots(solutionFileUpload.files))
+      ) {
+        swal({
+          icon: "warning",
+          title: "Punkt im Dateiname",
+          text: "Der Dateiname darf nur einen Punkt haben, dieser trennt den eigentlichen Dateinamen von der Endung.",
+        });
+      } else if (
+        !(
+          allAllowed(historyFileUpload.files) &&
+          allAllowed(solutionFileUpload.files)
+        )
+      ) {
+        swal({
+          icon: "warning",
+          title: "Dateiformat nicht erlaubt",
+          text: "Es sind nur .java, .py und .ipynb Dateien erlaubt.",
+        });
+      } else if (
+        !anyCheckedLikert("easier-likert") ||
+        !anyCheckedLikert("confident-likert") ||
+        !anyCheckedLikert("fun-likert")
+      ) {
+        swal({
+          icon: "warning",
+          title: "Abgabe unvollständig",
+          text: "Bitte beantworten Sie alle Fragen.",
+        });
+      } else if (historyFileUpload.files.length == 0) {
+        swal({
+          icon: "warning",
+          title: "Sind Sie sicher, dass Sie keine History abgeben möchten?",
+          buttons: {
+            back: {
+              text: "Nein, History hochladen",
+              value: "back",
+            },
+            confirm: {
+              text: "Ja, abgeben",
+              value: "submit",
+              className: "swal-cancel",
+            },
+          },
+        }).then((value) => {
+          console.log(value);
+          if (value === "submit") {
+            submit();
+          }
+        });
+      } else {
+        submit();
+      }
+    });
+
+    function submit() {
+      let formData = new FormData(form);
+      formData.append("task", "{{task_nr}}")
+      $.ajax({
+        type: "POST",
+        url: "{{path_prefix}}" + "/submit",
+        processData: false,
+        contentType: false,
+        data: formData,
+        success: function (response) {
+          swal({
+            icon: "success",
+            title: "Erfolgreich abgegeben.",
+            button: "Weiter",
+          }).then((value) => {
+            window.location.href = "{{path_prefix}}" + "/start";
+          });
+        },
+        error: function (xhr, ajaxOptions, thrownError) {
+          console.log(xhr);
+          console.log(ajaxOptions);
+          console.log(thrownError);
+          swal({
+            icon: "error",
+            title: "Abgabe fehlgeschlagen",
+            text: "Probieren Sie es erneut oder kontaktieren Sie die Übungsleitung.",
+            button: "Ok",
+          }).then((value) => {
+            window.location.reload();
+          });
+        },
+      });
+    }
+
+    solutionFileUpload.addEventListener("change", updateSolutionFilePreview);
+    historyFileUpload.addEventListener("change", updateHistoryFilePreview);
+
+    function anyCheckedLikert(likert_id) {
+      likert_element = document.getElementById(likert_id);
+      options = likert_element.querySelectorAll("input");
+      return [...options]
+        .map((opt) => {
+          return opt.checked;
+        })
+        .some((b) => {
+          return b;
+        });
+    }
+
+    function noDots(files) {
+      for (let i = 0; i < files.length; i++) {
+        if (files[i].name.split(".").length != 2) {
+          return false;
+        }
+      }
+      return true;
+    }
+
+    function allAllowed(files) {
+      console.log(files);
+      for (let i = 0; i < files.length; i++) {
+        if (
+          files[i].name.split(".")[1] !== "py" &&
+          files[i].name.split(".")[1] !== "java" &&
+          files[i].name.split(".")[1] !== "ipynb"
+        ) {
+          return false;
+        }
+      }
+      return true;
+    }
+
+    function updateSolutionFilePreview() {
+      solutionFilePreview.innerHTML = `${solutionFileUpload.files.length} Dateien hochgeladen.`;
+    }
+
+    function updateHistoryFilePreview() {
+      historyFilePreview.innerHTML = `${historyFileUpload.files.length} Dateien hochgeladen.`;
+    }
+    console.log("{{task_nr}}")
+  </script>
+</body>
+
+</html>

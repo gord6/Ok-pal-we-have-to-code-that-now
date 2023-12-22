@@ -1,0 +1,104 @@
+conversation_id,max_points,task,percentage_correct,user_id,purpose_blocks,Code generation,Code refinement,Concept comprehension,Code comprehension,Docs querying,Bug identification,Testing
+46.0,5,1,0.5,39,"['Code generation', 'Docs querying', 'Code generation', 'Bug identification', 'Code generation', 'Docs querying', 'Code generation']",1,0,0,0,1,1,0
+109.0,5,1,0.6,32,"['Code generation', 'Code refinement', 'Code generation', 'Code refinement']",1,1,0,0,0,0,0
+58.0,5,1,0.8,11,['Bug identification'],0,0,0,0,0,1,0
+113.0,5,1,0.2,31,['Docs querying'],0,0,0,0,1,0,0
+37.0,5,1,0.3,7,"['Code generation', 'Code comprehension', 'Code generation', 'Code comprehension', 'Code generation']",1,0,0,1,0,0,0
+28.0,5,1,0.2,46,['Code generation'],1,0,0,0,0,0,0
+18.0,5,1,0.9,37,"['Code generation', 'Code refinement', 'Code generation']",1,1,0,0,0,0,0
+54.0,5,1,0.9,9,['Docs querying'],0,0,0,0,1,0,0
+51.0,5,1,0.6,30,"['Code generation', 'Code comprehension']",1,0,0,1,0,0,0
+16.0,5,1,1.0,54,"['Code generation', 'Testing']",1,0,0,0,0,0,1
+102.0,5,1,1.0,16,"['Docs querying', 'Code generation', 'Docs querying']",1,0,0,0,1,0,0
+7.0,5,1,0.9,14,"['Code generation', 'Code refinement', 'Code generation', 'Code refinement', 'Testing', 'Docs querying']",1,1,0,0,1,0,1
+9.0,5,1,0.9,13,"['Code generation', 'Code refinement', 'Code generation']",1,1,0,0,0,0,0
+8.0,5,1,0.0,22,['Docs querying'],0,0,0,0,1,0,0
+88.0,5,1,0.0,50,['Code generation'],1,0,0,0,0,0,0
+22.0,5,1,0.4,53,"['Docs querying', 'Code generation', 'Bug identification']",1,0,0,0,1,1,0
+98.0,5,1,1.0,43,"['Docs querying', 'Code generation', 'Code refinement', 'Code generation', 'Testing']",1,1,0,0,1,0,1
+38.0,5,1,1.0,42,"['Code generation', 'Code comprehension', 'Code generation', 'Bug identification']",1,0,0,1,0,1,0
+111.0,5,1,1.0,40,"['Code generation', 'Testing']",1,0,0,0,0,0,1
+94.0,5,1,0.1,17,"['Concept comprehension', 'Docs querying', 'Code generation', 'Docs querying']",1,0,1,0,1,0,0
+41.0,5,1,0.1,47,['Code generation'],1,0,0,0,0,0,0
+33.0,5,1,1.0,36,['Code generation'],1,0,0,0,0,0,0
+117.0,5,1,0.5,19,"['Docs querying', 'Code generation', 'Code comprehension', 'Code generation', 'Docs querying', 'Testing']",1,0,0,1,1,0,1
+73.0,5,1,1.0,38,"['Code generation', 'Code refinement']",1,1,0,0,0,0,0
+108.0,5,1,0.3,51,"['Docs querying', 'Code generation', 'Docs querying']",1,0,0,0,1,0,0
+0.0,5,1,0.8,33,['Code generation'],1,0,0,0,0,0,0
+82.0,5,1,0.1,34,['Docs querying'],0,0,0,0,1,0,0
+74.0,5,1,0.3,15,"['Docs querying', 'Code generation', 'Docs querying']",1,0,0,0,1,0,0
+87.0,5,1,0.8,1,"['Code generation', 'Code refinement']",1,1,0,0,0,0,0
+76.0,5,1,0.2,27,"['Code generation', 'Code refinement', 'Code comprehension', 'Bug identification']",1,1,0,1,0,1,0
+91.0,5,1,0.3,12,"['Code comprehension', 'Docs querying']",0,0,0,1,1,0,0
+32.0,5,1,0.4,21,['Code generation'],1,0,0,0,0,0,0
+84.0,5,1,0.6,45,['Code generation'],1,0,0,0,0,0,0
+12.0,5,1,0.5,23,['Code generation'],1,0,0,0,0,0,0
+4.0,5,1,0.7,52,"['Docs querying', 'Code generation', 'Docs querying']",1,0,0,0,1,0,0
+2.0,5,1,0.4,18,['Code generation'],1,0,0,0,0,0,0
+70.0,5,1,0.0,35,['Code generation'],1,0,0,0,0,0,0
+119.0,5,1,0.0,28,"['Docs querying', 'Bug identification', 'Code generation']",1,0,0,0,1,1,0
+63.0,5,1,0.1,48,['Code generation'],1,0,0,0,0,0,0
+118.0,5,1,0.5,49,"['Code generation', 'Code refinement', 'Code generation']",1,1,0,0,0,0,0
+50.0,5,1,0.5,2,"['Code generation', 'Docs querying', 'Code generation', 'Code comprehension', 'Docs querying']",1,0,0,1,1,0,0
+59.0,6,2,0.0,11,"['Code generation', 'Docs querying']",1,0,0,0,1,0,0
+114.0,6,2,0.0,31,"['Concept comprehension', 'Docs querying', 'Bug identification']",0,0,1,0,1,1,0
+27.0,6,2,0.5,20,['Docs querying'],0,0,0,0,1,0,0
+29.0,6,2,0.0,46,['Docs querying'],0,0,0,0,1,0,0
+78.0,6,2,0.0,5,['Code generation'],1,0,0,0,0,0,0
+19.0,6,2,0.0,37,"['Code generation', 'Code refinement', 'Code generation', 'Code refinement', 'Code generation', 'Code refinement', 'Code generation', 'Code refinement']",1,1,0,0,0,0,0
+99.0,6,2,0.4166666666666667,43,"['Code generation', 'Code refinement']",1,1,0,0,0,0,0
+10.0,6,2,0.25,13,"['Code generation', 'Code refinement', 'Docs querying', 'Code comprehension', 'Code generation']",1,1,0,1,1,0,0
+39.0,6,2,0.6666666666666666,42,"['Docs querying', 'Testing']",0,0,0,0,1,0,1
+52.0,6,2,0.75,30,"['Code generation', 'Testing', 'Bug identification', 'Code generation']",1,0,0,0,0,1,1
+17.0,6,2,0.4166666666666667,54,"['Code generation', 'Testing']",1,0,0,0,0,0,1
+55.0,6,2,0.0833333333333333,9,"['Code generation', 'Testing', 'Code generation', 'Bug identification', 'Concept comprehension']",1,0,1,0,0,1,1
+89.0,6,2,0.0,50,['Docs querying'],0,0,0,0,1,0,0
+95.0,6,2,0.0,17,['Docs querying'],0,0,0,0,1,0,0
+23.0,6,2,0.0,53,"['Code generation', 'Code refinement']",1,1,0,0,0,0,0
+83.0,6,2,0.0,6,"['Bug identification', 'Docs querying', 'Bug identification', 'Docs querying']",0,0,0,0,1,1,0
+103.0,6,2,0.1666666666666666,16,"['Code generation', 'Docs querying']",1,0,0,0,1,0,0
+120.0,6,2,0.0833333333333333,28,"['Docs querying', 'Code generation']",1,0,0,0,1,0,0
+30.0,6,3,0.0,46,"['Code generation', 'Code refinement', 'Code generation']",1,1,0,0,0,0,0
+60.0,6,3,0.6666666666666666,11,"['Concept comprehension', 'Code comprehension', 'Docs querying', 'Bug identification', 'Docs querying']",0,0,1,1,1,1,0
+110.0,6,3,0.25,32,['Docs querying'],0,0,0,0,1,0,0
+105.0,6,3,0.1666666666666666,8,"['Concept comprehension', 'Code generation', 'Bug identification']",1,0,1,0,0,1,0
+85.0,6,2,0.8333333333333334,45,"['Testing', 'Code comprehension', 'Testing']",0,0,0,1,0,0,1
+75.0,6,2,0.6666666666666666,15,"['Code generation', 'Docs querying']",1,0,0,0,1,0,0
+47.0,6,2,0.0833333333333333,39,['Bug identification'],0,0,0,0,0,1,0
+5.0,6,2,0.3333333333333333,52,"['Concept comprehension', 'Code generation']",1,0,1,0,0,0,0
+100.0,6,3,1.0,43,"['Code generation', 'Testing', 'Bug identification', 'Code generation']",1,0,0,0,0,1,1
+20.0,6,3,1.0,37,"['Concept comprehension', 'Code generation', 'Code refinement', 'Code generation', 'Testing', 'Code generation', 'Bug identification', 'Code generation', 'Bug identification', 'Code generation']",1,1,1,0,0,1,1
+56.0,6,3,1.0,9,['Code generation'],1,0,0,0,0,0,0
+96.0,6,3,0.6666666666666666,17,"['Docs querying', 'Bug identification', 'Code comprehension', 'Code generation']",1,0,0,1,1,1,0
+13.0,6,3,1.0,23,['Code generation'],1,0,0,0,0,0,0
+3.0,6,3,0.0,18,['Code generation'],1,0,0,0,0,0,0
+34.0,6,3,0.0,36,"['Code generation', 'Code refinement', 'Code generation']",1,1,0,0,0,0,0
+71.0,6,3,0.0,35,"['Code generation', 'Code refinement', 'Code generation', 'Code refinement', 'Code generation']",1,1,0,0,0,0,0
+92.0,6,3,0.1666666666666666,12,['Code generation'],1,0,0,0,0,0,0
+48.0,6,3,0.8333333333333334,39,"['Code generation', 'Code comprehension', 'Code generation']",1,0,0,1,0,0,0
+64.0,6,3,0.0,48,['Code generation'],1,0,0,0,0,0,0
+61.0,5,4,0.8,11,"['Docs querying', 'Bug identification']",0,0,0,0,1,1,0
+79.0,5,4,0.9,5,"['Code generation', 'Code comprehension', 'Code generation']",1,0,0,1,0,0,0
+31.0,5,4,0.9,46,"['Code comprehension', 'Code generation', 'Code refinement', 'Bug identification', 'Code comprehension']",1,1,0,1,0,1,0
+112.0,5,4,0.8,40,"['Code generation', 'Testing', 'Bug identification', 'Testing', 'Bug identification']",1,0,0,0,0,1,1
+11.0,5,4,0.8,13,"['Code generation', 'Bug identification']",1,0,0,0,0,1,0
+21.0,5,4,0.8,37,"['Code generation', 'Code refinement', 'Code generation', 'Code refinement', 'Code generation', 'Code refinement', 'Testing']",1,1,0,0,0,0,1
+101.0,5,4,0.8,43,"['Code generation', 'Code refinement', 'Code comprehension', 'Code generation', 'Code refinement', 'Testing', 'Bug identification']",1,1,0,1,0,1,1
+97.0,5,4,0.3,17,"['Code generation', 'Docs querying', 'Code generation', 'Code refinement', 'Code generation']",1,1,0,0,1,0,0
+57.0,5,4,0.8,9,"['Docs querying', 'Code generation', 'Concept comprehension']",1,0,1,0,1,0,0
+24.0,5,4,0.8,53,"['Concept comprehension', 'Code generation', 'Concept comprehension']",1,0,1,0,0,0,0
+90.0,5,4,0.0,50,"['Concept comprehension', 'Code generation', 'Code refinement', 'Code comprehension', 'Code generation', 'Docs querying', 'Code generation']",1,1,1,1,1,0,0
+1.0,5,4,0.8,33,"['Code generation', 'Code refinement']",1,1,0,0,0,0,0
+14.0,5,4,0.8,23,['Code generation'],1,0,0,0,0,0,0
+93.0,5,4,0.0,12,"['Concept comprehension', 'Code generation', 'Code comprehension', 'Testing', 'Code generation']",1,0,1,1,0,0,1
+86.0,5,4,0.8,45,"['Code generation', 'Testing', 'Code refinement', 'Testing']",1,1,0,0,0,0,1
+65.0,5,4,0.8,48,['Code generation'],1,0,0,0,0,0,0
+49.0,5,4,0.7,41,['Code comprehension'],0,0,0,1,0,0,0
+49.0,5,4,0.7,41,['Code comprehension'],0,0,0,1,0,0,0
+128.0,5,1,0.7,10_3,['Code generation'],1,0,0,0,0,0,0
+126.0,5,1,0.9,3,"['Code generation', 'Testing', 'Code refinement', 'Bug identification', 'Code generation']",1,1,0,0,0,1,1
+123.0,5,1,0.3,10,"['Code generation', 'Docs querying', 'Code generation', 'Code refinement', 'Bug identification', 'Code refinement']",1,1,0,0,1,1,0
+122.0,5,1,0.0,44,"['Code generation', 'Docs querying', 'Code generation']",1,0,0,0,1,0,0
+127.0,6,2,0.5833333333333334,3,"['Code generation', 'Testing', 'Code refinement', 'Bug identification']",1,1,0,0,0,1,1
+124.0,6,2,0.5,10,['Code generation'],1,0,0,0,0,0,0
+125.0,6,3,0.6666666666666666,10,['Code generation'],1,0,0,0,0,0,0

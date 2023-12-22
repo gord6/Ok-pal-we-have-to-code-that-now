@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Chatbot</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles/style-start.css') }}" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+
+<body>
+  <!-- partial:index.partial.html -->
+  <section class="start">
+    <header class="start-header">
+      <div class="start-header-title">
+        Willkommen in der Übung "Datenstrukturen" im Sommersemester 2023
+      </div>
+    </header>
+    <main class="main">
+      <div class="task-title"><b>{{task_nr|safe}}</b></div>
+
+      <div class="task-description">{{task|safe}}</div>
+
+      <a class="start-button" id="start-btn" href="{{ url_for('chat') }}">Start</a>
+    </main>
+  </section>
+  <script>
+    start_button = document.getElementById("start-btn")
+
+    start_button.addEventListener("click", (event) => {
+      $.post("{{path_prefix}}" + "/action", { "action": "start", "task": "{{task_nr}}" })
+    })
+  </script>
+</body>
+
+</html>
